@@ -26,7 +26,6 @@ public class EnemyMovenemt : MonoBehaviour
 		Vector2 lineCastPos = myTrans.position.toVector2() - myTrans.right.toVector2() * myWidth + Vector2.up * myHeight;
 
 		//Check to see if there's ground in front of us before moving forward
-		//NOTE: Unity 4.6 and below use "- Vector2.up" instead of "+ Vector2.down"
 		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
 		bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
 

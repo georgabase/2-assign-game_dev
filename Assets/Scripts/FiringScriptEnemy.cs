@@ -7,18 +7,14 @@ public class FiringScriptEnemy : MonoBehaviour
 		// 1 - Designer variables
 		//--------------------------------
 
-		/// <summary>
 		/// Projectile prefab for shooting
-		/// </summary>
 		public Transform shotPrefabLeft;
 		public Transform shotPrefabRight;
 		public Transform firingPoint;
 		private Transform shotTransform;
 
 
-		/// <summary>
 		/// Cooldown in seconds between two shots
-		/// </summary>
 		public float shootingRate = 1f;
 
 		//--------------------------------
@@ -49,7 +45,6 @@ public class FiringScriptEnemy : MonoBehaviour
 			} else if (!playerScript.facingRight) {shotTransform = Instantiate (shotPrefabLeft) as Transform;
 			}
 
-			//shotTransform = Instantiate (shotPrefabRight) as Transform;	
 			shotTransform.position = firingPoint.transform.position;  //transform.position;
 
 			// The is enemy property
@@ -58,13 +53,7 @@ public class FiringScriptEnemy : MonoBehaviour
 
 		}
 
-		//--------------------------------
-		// 3 - Shooting from another script
-		//--------------------------------
-
-		/// <summary>
-		/// Create a new projectile if possible
-		/// </summary>
+		
 		public void Attack(bool isEnemy)
 	{
 		
